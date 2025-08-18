@@ -4,118 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProductC - Raincoat | TestWebsite</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .product-detail {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        
-        .nav-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 12px 25px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: background 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            background: #5a67d8;
-        }
-        
-        .product-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .product-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-            background: linear-gradient(45deg, #1abc9c, #16a085);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-            box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
-        }
-        
-        h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .product-id {
-            color: #7f8c8d;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-        
-        .description-section {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 30px 0;
-        }
-        
-        .description-title {
-            color: #2c3e50;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        
-        .description-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #5d6d7e;
-        }
-    </style>
+    <meta name="description" content="ProductC - Waterproof garment for wet conditions and heavy downpours">
+    <meta name="keywords" content="waterproof, garment, wet conditions, downpours, productc, moisture protection">
 </head>
-<body>
-    <div class="container">
-        <div class="product-detail">
-            <a href="index.html" class="nav-link">← Back to Store</a>
-            
-            <div class="product-header">
-                <div class="product-icon">🌧️</div>
-                <h1>ProductC</h1>
-                <p class="product-id">Product ID: productc</p>
-            </div>
-            
-            <div class="description-section">
-                <h2 class="description-title">Product Description</h2>
-                <p class="description-text">
-                    This is a raincoat, it keeps you dry in rain. Essential for monsoon season and prevents getting soaked during downpours. Perfect for heavy showers and wet conditions.
-                </p>
-            </div>
+<body style="font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5;">
+    <div style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        
+        <a href="index.html" style="color: #007cba; text-decoration: none; margin-bottom: 20px; display: inline-block;">← Back to Store</a>
+        
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div style="font-size: 60px; margin-bottom: 20px;">🌧️</div>
+            <h1 style="color: #333; margin-bottom: 10px;">ProductC</h1>
+            <p style="color: #666; margin-bottom: 20px;">Product ID: productc</p>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+            <h3 style="color: #333; margin-bottom: 15px;">Product Description</h3>
+            <p style="color: #555; line-height: 1.6; font-size: 16px;">
+                Waterproof garment designed for stormy weather and heavy precipitation. 
+                Features moisture-resistant technology for complete protection during downpours.
+            </p>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <h4 style="color: #333; margin-bottom: 10px;">Features:</h4>
+            <ul style="color: #555; line-height: 1.6;">
+                <li>Waterproof protection technology</li>
+                <li>Perfect for stormy weather</li>
+                <li>Shields against precipitation</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <button style="background-color: #28a745; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 5px; cursor: pointer;">
+                Add to Cart - $149.99
+            </button>
         </div>
     </div>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "ProductC",
+        "description": "Waterproof garment for stormy weather and heavy precipitation",
+        "sku": "productc",
+        "category": "Clothing > Outerwear > Rainwear",
+        "brand": {
+            "@type": "Brand",
+            "name": "TestWebsite"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "149.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
 </body>
 </html>
