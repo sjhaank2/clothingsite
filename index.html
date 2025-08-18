@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestWebsite - Premium Store</title>
+    <meta name="description" content="Premium store offering quality items for all seasons and activities.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .product-card:nth-child(1) .product-icon {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+        }
+        
+        .product-card:nth-child(2) .product-icon {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+        }
+        
+        .product-card:nth-child(3) .product-icon {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+        }
+        
+        .product-card:nth-child(4) .product-icon {
+            background: linear-gradient(45deg, #8b4513, #654321);
+        }
+        
+        .product-card:nth-child(5) .product-icon {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+        }
+        
+        .product-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .product-id {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .product-description {
+            color: #5d6d7e;
+            line-height: 1.6;
+            font-size: 1rem;
+            text-align: left;
+        }
+        
+        .product-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .product-link:hover {
+            background: #5a67d8;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+            color: white;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TestWebsite</h1>
+            <p class="subtitle">Premium Store for All Seasons</p>
+        </header>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">🧥</div>
+                <h2 class="product-name">ProductA</h2>
+                <p class="product-id">ID: producta</p>
+                <p class="product-description">
+                    This is a jacket, it keeps you warm in winters. Excellent for sub-zero conditions and snowy days. Provides insulation and body heat retention.
+                </p>
+                <a href="producta.html" class="product-link">View Details</a>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-icon">🧥</div>
+                <h2 class="product-name">ProductB</h2>
+                <p class="product-id">ID: productb</p>
+                <p class="product-description">
+                    This is a coat, it keeps you cozy in chilly times. Perfect for autumn evenings and morning commutes to work.
+                </p>
+                <a href="productb.html" class="product-link">View Details</a>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-icon">🌧️</div>
+                <h2 class="product-name">ProductC</h2>
+                <p class="product-id">ID: productc</p>
+                <p class="product-description">
+                    This is a raincoat, it keeps you dry in rain. Essential for monsoon season and prevents getting soaked during downpours.
+                </p>
+                <a href="productc.html" class="product-link">View Details</a>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-icon">🥾</div>
+                <h2 class="product-name">ProductD</h2>
+                <p class="product-id">ID: productd</p>
+                <p class="product-description">
+                    This is a hiking boot, it provides excellent grip on rocky paths. Perfect for mountain adventures and wilderness exploration.
+                </p>
+                <a href="productd.html" class="product-link">View Details</a>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-icon">👕</div>
+                <h2 class="product-name">ProductE</h2>
+                <p class="product-id">ID: producte</p>
+                <p class="product-description">
+                    This is a summer shirt, it keeps you cool in sunny days. Breathable fabric perfect for beach vacations and UV shield.
+                </p>
+                <a href="producte.html" class="product-link">View Details</a>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h3>Discover Our Premium Collection</h3>
+            <p>Quality items for every season and activity</p>
+            <a href="#" class="cta-button">Explore Products</a>
+        </div>
+    </div>
+</body>
+</html>
