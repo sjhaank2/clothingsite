@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestWebsite - Premium Store</title>
-    <meta name="description" content="Premium store offering quality items for all seasons and activities.">
+    <title>TestWebsite - Premium Clothing Store</title>
+    <meta name="description" content="TestWebsite - Premium clothing store offering quality garments for all seasons and activities">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -19,141 +18,147 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
-        
         header {
             text-align: center;
             color: white;
-            padding: 40px 0;
+            margin-bottom: 50px;
         }
-        
         h1 {
             font-size: 3rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
-        .subtitle {
+        .tagline {
             font-size: 1.2rem;
             opacity: 0.9;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
-        
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
-        
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .stat-item {
             text-align: center;
         }
-        
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .product-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
-        
         .product-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
         }
-        
-        .product-card:nth-child(1) .product-icon {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-        }
-        
-        .product-card:nth-child(2) .product-icon {
-            background: linear-gradient(45deg, #3498db, #2980b9);
-        }
-        
-        .product-card:nth-child(3) .product-icon {
-            background: linear-gradient(45deg, #1abc9c, #16a085);
-        }
-        
-        .product-card:nth-child(4) .product-icon {
-            background: linear-gradient(45deg, #8b4513, #654321);
-        }
-        
-        .product-card:nth-child(5) .product-icon {
-            background: linear-gradient(45deg, #f39c12, #e67e22);
-        }
-        
         .product-name {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: bold;
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: #333;
         }
-        
-        .product-id {
-            color: #7f8c8d;
+        .product-category {
+            color: #666;
             font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 15px;
         }
-        
         .product-description {
-            color: #5d6d7e;
-            line-height: 1.6;
-            font-size: 1rem;
-            text-align: left;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
-        
         .product-link {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #667eea;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
             color: white;
             text-decoration: none;
-            border-radius: 20px;
-            transition: background 0.3s ease;
+            border-radius: 25px;
             font-weight: 500;
+            transition: all 0.3s ease;
         }
-        
         .product-link:hover {
-            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
-        
         .cta-section {
             text-align: center;
             margin-top: 60px;
             color: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
         }
-        
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .cta-description {
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
         .cta-button {
             display: inline-block;
-            padding: 15px 30px;
-            background: rgba(255,255,255,0.2);
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.2);
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
-            margin-top: 20px;
         }
-        
         .cta-button:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .stats {
+                gap: 20px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .container {
+                padding: 20px 15px;
+            }
         }
     </style>
 </head>
@@ -161,66 +166,72 @@
     <div class="container">
         <header>
             <h1>TestWebsite</h1>
-            <p class="subtitle">Premium Store for All Seasons</p>
+            <p class="tagline">Premium Clothing Store</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Premium Products</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Quality Guaranteed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Customer Support</span>
+                </div>
+            </div>
         </header>
-        
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-icon">🧥</div>
-                <h2 class="product-name">ProductA</h2>
-                <p class="product-id">ID: producta</p>
-                <p class="product-description">
-                    This is a jacket, it keeps you warm in winters. Excellent for sub-zero conditions and snowy days. Provides insulation and body heat retention.
-                </p>
-                <a href="producta.html" class="product-link">View Details</a>
+
+        <main>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🧥</div>
+                    <h2 class="product-name">ProductA</h2>
+                    <div class="product-category">Insulated Outerwear</div>
+                    <p class="product-description">Premium garment for sub-zero temperatures and frosty conditions</p>
+                    <a href="producta.html" class="product-link">View Details</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🧥</div>
+                    <h2 class="product-name">ProductB</h2>
+                    <div class="product-category">Professional Overcoat</div>
+                    <p class="product-description">Elegant styling for business environments and office settings</p>
+                    <a href="productb.html" class="product-link">View Details</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🌧️</div>
+                    <h2 class="product-name">ProductC</h2>
+                    <div class="product-category">Waterproof Garment</div>
+                    <p class="product-description">Advanced protection for stormy weather and precipitation</p>
+                    <a href="productc.html" class="product-link">View Details</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🥾</div>
+                    <h2 class="product-name">ProductD</h2>
+                    <div class="product-category">Mountain Footwear</div>
+                    <p class="product-description">Sturdy construction for alpine adventures and rocky terrain</p>
+                    <a href="productd.html" class="product-link">View Details</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">👕</div>
+                    <h2 class="product-name">ProductE</h2>
+                    <div class="product-category">Tropical Apparel</div>
+                    <p class="product-description">Breathable design for sweltering climates and beach excursions</p>
+                    <a href="producte.html" class="product-link">View Details</a>
+                </div>
             </div>
-            
-            <div class="product-card">
-                <div class="product-icon">🧥</div>
-                <h2 class="product-name">ProductB</h2>
-                <p class="product-id">ID: productb</p>
-                <p class="product-description">
-                    This is a coat, it keeps you cozy in chilly times. Perfect for autumn evenings and morning commutes to work.
-                </p>
-                <a href="productb.html" class="product-link">View Details</a>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-icon">🌧️</div>
-                <h2 class="product-name">ProductC</h2>
-                <p class="product-id">ID: productc</p>
-                <p class="product-description">
-                    This is a raincoat, it keeps you dry in rain. Essential for monsoon season and prevents getting soaked during downpours.
-                </p>
-                <a href="productc.html" class="product-link">View Details</a>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-icon">🥾</div>
-                <h2 class="product-name">ProductD</h2>
-                <p class="product-id">ID: productd</p>
-                <p class="product-description">
-                    This is a hiking boot, it provides excellent grip on rocky paths. Perfect for mountain adventures and wilderness exploration.
-                </p>
-                <a href="productd.html" class="product-link">View Details</a>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-icon">👕</div>
-                <h2 class="product-name">ProductE</h2>
-                <p class="product-id">ID: producte</p>
-                <p class="product-description">
-                    This is a summer shirt, it keeps you cool in sunny days. Breathable fabric perfect for beach vacations and UV shield.
-                </p>
-                <a href="producte.html" class="product-link">View Details</a>
-            </div>
-        </div>
-        
-        <div class="cta-section">
-            <h3>Discover Our Premium Collection</h3>
-            <p>Quality items for every season and activity</p>
-            <a href="#" class="cta-button">Explore Products</a>
-        </div>
+        </main>
+
+        <section class="cta-section">
+            <h2 class="cta-title">Discover Premium Quality</h2>
+            <p class="cta-description">Explore our curated collection of premium clothing for every season and occasion</p>
+            <a href="#products" class="cta-button">Shop Collection</a>
+        </section>
     </div>
 </body>
 </html>
