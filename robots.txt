@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sjhaank2.github.io/clothingsite/sitemap.xml
